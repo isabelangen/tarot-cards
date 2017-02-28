@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Traveling Cards</title>
+    <style>
+      @keyframes travel {
+        0% {transform: translate(-300px, 300px);}
+        100% {transform: translate(1500px, 300px);}
+      }
+      body{
+        background-color: black;
+      }
+       #container {
+        width: 600px;
+        margin: auto;
+        margin-bottom: -150px;
+      }
+      .cards {
+        position: fixed;
+        animation-name: travel;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .sun{
+        transform: rotate(60deg);
+      } 
+      .moon{
+        transform: rotate(50deg);
+      }
+      .star{
+        transform: rotate(40deg);
+      }
+      .cards:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="cards">
+        <a href="index.html"><div class="star"><img src="star.jpg" height="400"></div></a>
+      </div> 
+      <div class="cards">
+         <a href="reveal.html"><div class="moon"><img src="moon.jpg" height="400"></div></a>
+      </div> 
+      <div class="cards">
+        <a href="index.html"><div class="sun"><img src="sun.jpg" height="400"></div></a>
+      </div> 
+    </div> 
+
+  </body>
+</html>
